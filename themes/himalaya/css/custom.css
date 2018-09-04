@@ -1146,6 +1146,7 @@ ul li {
   width: 50%;
   right: 0;
   background-color: rgb(238,115,103,0.75);
+  visibility: visible;
   height: 98%;
   padding: 10px;
   color: white;
