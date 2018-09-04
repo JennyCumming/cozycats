@@ -166,7 +166,9 @@ nav {
   margin: 0px;
 }
 .site-name a {
-  color: #FFFFFF;
+  color: black;
+  font-weight: bold;
+  font-size: 23px;
 }
 
 /****************mobile ****/
@@ -186,7 +188,7 @@ nav {
 
 /* line 123, ../sass/custom/_style.scss */
 .container .mean-nav ul {
-  background-color: #0db4e9;
+  background-color: #ee7367;
 }
 
 /*** form *****/
@@ -264,6 +266,10 @@ nav {
 /* line 182, ../sass/custom/_style.scss */
 a {
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 /* line 185, ../sass/custom/_style.scss */
@@ -891,7 +897,7 @@ ul li {
   -moz-transition-duration: 0.4s;
   -o-transition-duration: 0.4s;
   transition-duration: 0.4s;
-  background-color: #0db4e9;
+  background-color: #ee7367;
   display: none;
   margin: 0;
   padding: 0;
@@ -970,7 +976,7 @@ ul li {
 
   /* line 50, ../sass/custom/_responsive.scss */
   .menu li:hover {
-    background: #009fda;
+    background: #ee7367;
   }
 
   /* line 53, ../sass/custom/_responsive.scss */
@@ -1194,4 +1200,10 @@ ul li {
 
 .view-gallery .views_slideshow_controls_text_previous a {
   background: url("../images/left-arrow.png");
+}
+
+@media (max-width: 992px) {
+  #block-views-block-homepage-promotion-blocks-block-1 .views-row{
+    width: 100%;
+  }
 }
