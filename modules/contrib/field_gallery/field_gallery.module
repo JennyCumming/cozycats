@@ -1,0 +1,92 @@
+<?php
+
+/**
+ * @file
+ * Field gallery hooks and functions.
+ *
+ *  Field_gallery.module.
+ */
+
+use Drupal\Core\Url;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * @file
+ * Field Gallery module.
+ *
+ * This file provide drupal hooks.
+ */
+
+/**
+ * Implements hook_help().
+ *
+ * Display help page.
+ */
+function field_gallery_help($route_name, RouteMatchInterface $route_match) {
+  if ($route_name == 'help.page.field_gallery') {
+
+    $current_url = Url::fromRoute('<current>');
+    if (strstr($current_url->toString(), '/admin/help/field_gallery') === FALSE) {
+      return TRUE;
+    }
+
+    $output = '';
+    $output .= '<h3>About</h3>';
+    $output .= '<p>@TODO : About field_gallery.
+</p>';
+
+    return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * Add field_gallery template.
+ */
+function field_gallery_theme($existing, $type, $theme, $path) {
+  return [
+    'field_gallery' => [
+      'variables' => [
+        'image' => NULL,
+        'thumbnails' => NULL,
+        'prev_next' => NULL,
+        'url' => NULL,
+        'url_next' => NULL,
+        'url_prev' => NULL,
+        // Current image is the first image.
+        'is_fst' => NULL,
+        // Current image is the last image.
+        'is_lst' => NULL,
+        // Current image index.
+        'index' => 0,
+        // Previous button text.
+        'text_prev' => 'Previous',
+        // Next button text.
+        'text_next' => 'Next',
+        // Next link on main image.
+        'mainimglink' => TRUE,
+        // Entity settings.
+        'settings' => [],
+      ],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ *
+ * Add template suggestions.
+ */
+function field_gallery_theme_suggestions_field_gallery($variables) {
+
+  $suggestions = [];
+  $sett = $variables['settings'];
+
+  $suggestions[] = 'field_gallery__' . $sett['#field_name'];
+  $suggestions[] = 'field_gallery__' . $sett['#entity_type'];
+  $suggestions[] = 'field_gallery__' . $sett['#bundle'];
+  $suggestions[] = 'field_gallery__' . $sett['#field_name'] . '__' . $sett['#entity_type'] . '__' . $sett['#bundle'];
+
+  return $suggestions;
+}

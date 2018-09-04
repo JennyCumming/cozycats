@@ -1,0 +1,8 @@
+name: 'CozyCats Custom Code Module'
+description: Custom code required for the CozyCats website.
+package: Custom
+type: module
+version: 1.0
+core: 8.x
+dependencies:
+  - drupal:block

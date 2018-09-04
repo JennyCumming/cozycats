@@ -1,0 +1,13 @@
+field_gallery:
+  version: 1.0.0
+  js:
+    lib/js/field_gallery.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+
+field_gallery.style:
+  version: 1.0.0
+  css:
+    theme:
+      lib/css/field_gallery_style.css: {}
