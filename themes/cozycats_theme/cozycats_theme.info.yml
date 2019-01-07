@@ -1,0 +1,28 @@
+name: Cozycats Theme
+type: theme
+base theme: himalaya
+description: 'A Subtheme of the Himayala theme'
+package: Custom
+# version: VERSION
+# core: 8.x
+libraries:
+  - cozycats_theme/global-styling
+  - cozycats_theme/global-scripts
+regions:
+  header: Header
+  logo: Logo
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  help: Help 
+  breadcrumb: Breadcrumb
+  content: Content
+  sidebar_first: 'Sidebar first'
+  footer_first: 'Footer first'
+  footer_second: 'Footer second'
+  footer_third: 'Footer third'
+  footer_fourth: 'Footer fourth'
+  footer: 'Footer'
+
+version: '8.x-1'
+core: '8.x'
+project: 'cozycats'
