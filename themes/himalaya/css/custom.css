@@ -112,7 +112,8 @@ ul {
   -moz-transition-duration: 0.4s;
   -o-transition-duration: 0.4s;
   transition-duration: 0.4s;
-  background-color: #ee7367;
+  background-color: #8cc0b7;
+  border: 30px solid white;
   float: left;
   /*height: 69px;*/
 }
@@ -356,7 +357,7 @@ img {
 /* line 244, ../sass/custom/_style.scss */
 #footer-columns, 
 .section-full-colored .section-content {
-  background-color: #ee7367;
+  background-color: #8cc0b7;
 }
 
 /* line 247, ../sass/custom/_style.scss */
@@ -1131,80 +1132,5 @@ ul li {
   /* line 164, ../sass/custom/_responsive.scss */
   .mean-bar {
     width: 75%;
-  }
-}
-
-#block-views-block-homepage-promotion-blocks-block-1 .views-row{
-  width: 33%;
-  display: inline-block;
-  position: relative;
-}
-
-#block-views-block-homepage-promotion-blocks-block-1 .views-row .promo-block-layover {
-  position: absolute;
-  top: 0;
-  width: 50%;
-  right: 0;
-  background-color: rgb(238,115,103,0.75);
-  visibility: visible;
-  height: 98%;
-  padding: 10px;
-  color: white;
-}
-
-#block-views-block-homepage-promotion-blocks-block-1 .views-row .promo-block-layover a {
-  margin: 0 auto;
-  border: 1px solid white;
-  padding: 5px;
-  color: white;
-  font-weight: bold;
-}
-
-.view-gallery .view-content {
-  position: relative;
-}
-
-.view-gallery .views-slideshow-controls-top {
-  position: absolute;
-  z-index: 4;
-  width: 100%;
-  top: 40%;
-}
-
-.view-gallery .views_slideshow_controls_text_next {
-  position: absolute;
-  right: 0;
-  padding-right: 15px;
-}
-
-.view-gallery .views_slideshow_controls_text_pause {
-  display: none;
-}
-
-.view-gallery .views_slideshow_controls_text_previous {
-  position: absolute;
-  padding-left: 15px;
-}
-
-.view-gallery .views_slideshow_controls_text_next a,
-.view-gallery .views_slideshow_controls_text_previous a {
-  height: 50px;
-  width: 50px;
-  color: transparent;
-  display: inline-block;
-  overflow: hidden;
-}
-
-.view-gallery .views_slideshow_controls_text_next a {
-  background: url("../images/right-arrow.png");
-}
-
-.view-gallery .views_slideshow_controls_text_previous a {
-  background: url("../images/left-arrow.png");
-}
-
-@media (max-width: 992px) {
-  #block-views-block-homepage-promotion-blocks-block-1 .views-row{
-    width: 100%;
   }
 }
