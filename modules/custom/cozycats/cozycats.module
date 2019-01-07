@@ -1,0 +1,28 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Form;
+
+/**
+ * Implements hook_form_alter().
+ */
+function cozycats_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+	switch ($form_id) {
+	  case 'contact_message_contact_form_form':
+	  	// Edit Start and End date titles to be more meaningful.
+		$form['field_date_of_drop_off_and_colle']['widget'][0]['value']['#title'] = t('Drop off date');
+		$form['field_date_of_drop_off_and_colle']['widget'][0]['end_value']['#title'] = t('Pick up date');
+
+		// Edit Date range to only be current and next year.
+		$form['field_date_of_drop_off_and_colle']['widget'][0]['value']['#date_year_range'] = '-0:+1';
+		$form['field_date_of_drop_off_and_colle']['widget'][0]['end_value']['#date_year_range'] = '-0:+1';
+
+		// Hide unused Time - Hour and Minute drop downs.
+		unset($form['field_date_of_drop_off_and_colle']['widget'][0]['value']['#date_part_order'][3]);
+		unset($form['field_date_of_drop_off_and_colle']['widget'][0]['value']['#date_part_order'][4]);
+		unset($form['field_date_of_drop_off_and_colle']['widget'][0]['end_value']['#date_part_order'][3]);
+		unset($form['field_date_of_drop_off_and_colle']['widget'][0]['end_value']['#date_part_order'][4]);
+
+	  break;
+	}
+}
